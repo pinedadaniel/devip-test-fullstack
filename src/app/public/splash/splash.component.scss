@@ -1,0 +1,70 @@
+.container-splash {
+  background-color: #191919;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .splash {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    background-color: #000000;
+    transition: all 1s;
+    height: 100%;
+  }
+  .animate {
+    animation-duration: .5s;
+    animation-name: container-splash-resize;
+    animation-fill-mode: forwards;
+  }
+  .animate_up {
+    animation-duration: .2s;
+    animation-name: container-splash-up;
+    animation-fill-mode: forwards
+  }
+  .logo {
+    filter: brightness(100);
+  }
+  .animate_logo {
+    animation-duration: .5s;
+    animation-name: logo-color;
+    animation-fill-mode: forwards
+  }
+}
+
+.end_animate {
+  animation-duration: 1s;
+  animation-name: opacity;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes container-splash-resize {
+  from {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  to {
+    width: 200px;
+    height: 200px;
+    border: solid 1px white;
+  }
+}
+@keyframes logo-color {
+  from {
+    filter: brightness(100);
+  }
+  to {
+    filter: brightness(1.7);
+  }
+}

@@ -1,0 +1,128 @@
+.container_auth_main {
+  height: 100%;
+  animation-name: enter;
+  animation-duration: 1s;
+  position: absolute;
+  background-color: #000000;
+  top: 0;
+  left: 0;
+  .mask_opacity {
+    position: absolute;
+    background: rgba(0, 0, 0, .4);
+    background-image: linear-gradient(to top, rgba(0, 0, 0, .8) 0, rgba(0, 0, 0, .4) 60%, rgba(0, 0, 0, .8) 100%);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    .auth_header {
+      width: calc(100% - 7rem);
+      height: 5rem;
+      position: fixed;
+      z-Index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      top: 10px;
+      left: 3.5rem;
+      right: 3.5rem;
+    }
+    .container_card {
+      width: 430px;
+      height: 530px;
+      padding: 40px 60px 30px;
+      background-color: rgba(0,0,0,.8);
+      border-radius: 8px;
+      border: 1.5px solid white;
+      .reserved {
+        color: #fff;
+        font-size: 15px;
+        font-weight: 500;
+        margin-top: 20px;
+        text-shadow: white 0 0 1px;
+        text-align: center;
+      }
+      .logo {
+        margin: 15px 50px 0;
+      }
+      .title {
+        color: #fff;
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 25px;
+        text-shadow: black 0 0 20px;
+      }
+      .container_tag {
+        height: 50px;
+        display: flex;
+      }
+    }
+  }
+}
+input[type="radio"] {
+  display: none;
+}
+
+.primary {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.secondary {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.tag {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  display: block;
+}
+.tag input[type="radio"] + i {
+  background: #e4f6e9;
+  position: absolute;
+  cursor: pointer;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: #7b899a;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal;
+  .icon {
+    width: 20px;
+    height: 19px;
+    margin-left: 8px;
+    margin-top: -4px;
+    filter: contrast(0.4);
+  }
+}
+.tag input[type="radio"]:checked + i {
+  background: #01b4e4;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  font-weight: 600;
+  font-style: normal;
+  color: black;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  .icon {
+    width: 20px;
+    height: 19px;
+    margin-left: 8px;
+    margin-top: -4px;
+    filter: none;
+  }
+}

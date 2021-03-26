@@ -1,0 +1,14 @@
+<div class="container_private">
+  <header class="public_header">
+    <img height="60px" width="250px"  alt="logo" src="../../../assets/icons/logo.svg">
+    <a (click)="logout()" *ngIf="!login" class="btn_login">
+      Iniciar sesión
+    </a>
+    <a (click)="logout()" *ngIf="login" class="btn_login">
+      Cerrar sesión
+    </a>
+  </header>
+  <div class="layout">
+      <router-outlet></router-outlet>
+  </div>
+</div>

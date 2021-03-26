@@ -1,0 +1,115 @@
+.container_tmdb {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  .style_field {
+    height: 30px;
+    font-size: 18px;
+    color: white;
+  }
+  .submît {
+    width: 100%;
+    border: none;
+    height: 50px;
+    background-color: #01b4e4;
+    border-radius: 4px;
+    margin: 5px 0 0;
+    cursor: pointer;
+    transition: background-color 1s;
+    font-weight: 600;
+    font-style: normal;
+    color: #fff;
+    font-size: 18px;
+  }
+  .submît:hover {
+    background-color: #0178ff;
+  }
+}
+
+.container_alert {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .8);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  .content_alert{
+    width: 500px;
+    height: 400px;
+    border-radius: 8px;
+    background-color: #e4f6e9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    .title {
+      color: #000000;
+      font-size: 28px;
+      text-align: center;
+      line-height: 1.1;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-shadow: black 0 0 1px;
+    }
+    .info {
+      color: #000000;
+      font-size: 18px;
+      text-align: center;
+      line-height: 1.1;
+      font-weight: 500;
+      margin-bottom: 25px;
+      text-shadow: black 0 0 1px;
+    }
+    .br {
+      width: 100%;
+      height: 2px;
+      background-color: #01b4e4;
+      margin: 0 0 10px;
+    }
+    .row_btn{
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 40px;
+      width: 100%;
+      .btn_cancel {
+        width: 175px;
+        height: 50px;
+        border-radius: 4px;
+        background-color: #FF0000;
+        color: white;
+        font-size: 18px;
+        text-align: center;
+        cursor: pointer;
+        font-weight: 500;
+        border: none
+      }
+      .btn_cancel:hover {
+        background-color: #CA0B00;
+      }
+      .btn_go {
+        width: 175px;
+        cursor: pointer;
+        height: 50px;
+        border-radius: 4px;
+        background-color: #42D14D;
+        color: white;
+        line-height: 50px;
+        font-size: 18px;
+        text-align: center;
+        font-weight: 500;
+        border: none
+      }
+      .btn_go:hover {
+        background-color: #4BB543;
+      }
+    }
+  }
+  .util_position {
+    height: 50px;
+  }
+}

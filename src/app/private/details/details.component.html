@@ -1,0 +1,104 @@
+<p>details works!</p>
+<form class="w-100" [formGroup]="formSearch" (submit)="submit()">
+  <div class="content_search">
+    <input type="search" formControlName="search" class="search" placeholder=" Buscar peliculas, series, programas de tv">
+    <input type="submit" value="Buscar" class="submit" >
+  </div>
+</form>
+<div class="partial">
+  <div class="content_details">
+    <div class="info_main">
+      <div class="content_image">
+        <img class="image" width="100%" height="100%" alt="image_movie" src="{{'https://image.tmdb.org/t/p/w500' + urlImage}}" />
+      </div>
+      <div class="content_info">
+        <div class="row mg-bot-5">
+          <h5 class="font-18 color-blueLink"> Generos:  </h5>
+        </div>
+        <div class="list_genres">
+          <span *ngFor="let genre of (data ? data.genres : va) | slice:0:3; let isLast=last "> {{genre.name}} {{isLast ? '' : ' |'}} </span>
+        </div>
+        <div class="row mg-bot-15">
+          <h5 class="font-18 color-blueLink"> Lenguaje original:  </h5>
+        </div>
+        <div class="list_genres">
+          <span class="u_capital"> {{data ? data.original_language : ''}} </span>
+        </div>
+        <div class="row mg-bot-5">
+          <h5 class="font-18 color-blueLink">
+            Países de producción:  </h5>
+        </div>
+        <div class="list_genres">
+          <span *ngFor="let contry of (data ? data.production_countries : va) | slice:0:2; let isLast=last "> {{contry.name}} {{isLast ? '' : ' |'}} </span>
+        </div>
+      </div>
+    </div>
+    <div class="info_second">
+      <div class="content_info_second w-43">
+        <div class="row mg-bot-5">
+          <h5 class="font-18 color-blueLink"> Titulo:  </h5>
+        </div>
+        <div class="list_genres">
+          <span> {{data ? data.title : ''}} </span>
+        </div>
+        <div class="row mg-bot-5">
+          <h5 class="font-18 color-blueLink"> Descripción:  </h5>
+        </div>
+        <div class="list_genres_big">
+          <span> {{data ? data.overview : ''}} </span>
+        </div>
+      </div>
+      <span class="br"></span>
+      <div class="content_info_second w-47">
+        <div class="row mg-bot-5">
+          <h5 class="font-18 color-blueLink"> Fecha de lanzamiento:  </h5>
+        </div>
+        <div class="list_genres">
+          <span> {{data ? data.release_date : ''}} </span>
+          <i class="material-icons font-21 color-green">today</i>
+        </div>
+        <div class="row mg-bot-15">
+          <h5 class="font-18 color-blueLink"> Duracion:  </h5>
+        </div>
+        <div class="list_genres">
+          <span> {{data ? data.runtime : ''}}  min </span>
+          <i class="material-icons font-21 color-green">schedule</i>
+        </div>
+        <div class="row mg-bot-5">
+          <h5 class="font-18 color-blueLink"> Popularidad:  </h5>
+        </div>
+        <div class="list_genres">
+          <span> {{data ? data.popularity : ''}} </span>
+          <i class="material-icons font-21 color-green">visibility</i>
+        </div>
+        <div class="row mg-bot-5">
+            <h5 class="font-18 color-blueLink"> Ingresos:  </h5>
+        </div>
+        <div class="list_genres">
+          <span> {{data ? data.revenue : ''}} </span>
+          <i class="material-icons font-21 color-green">monetization_on</i>
+        </div>
+        <div class="row mg-bot-5">
+          <h5 class="font-18 color-blueLink"> Votos:  </h5>
+        </div>
+        <div class="list_genres">
+          <span> {{data ? data.vote_count : ''}}  </span>
+          <i class="material-icons font-21 color-red">favorite</i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="category">
+    <h4 class="title_category"> Recomendados para tí </h4>
+    <div class="list">
+      <div class="card_recommendated" (click)="goToDetails(movie.id)" *ngFor="let movie of recommendated | slice:0:4; ">
+        <img width="100%" alt="Image_movie" class="img_movie" height="100%" src="{{'https://image.tmdb.org/t/p/w500' + movie.poster_path}}">
+        <div class="mask_opacity">
+          <span> </span>
+          <i class="material-icons"> play_circle_outline </i>
+          <span> {{movie.original_title}} </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

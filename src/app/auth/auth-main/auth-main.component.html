@@ -1,0 +1,24 @@
+<div class="container_auth_main">
+  <img width="100%" height="100%" alt="background" src="../../../assets/images/background-home.jpg">
+  <div class="mask_opacity">
+    <div class="auth_header">
+      <img height="60px" width="250px"  alt="logo" src="../../../assets/icons/logo.svg">
+    </div>
+    <div class="container_card">
+      <h1 class="title"> Inicia sesión </h1>
+      <div class="container_tag">
+        <label class="tag">
+          <input type="radio" name="auth" checked (change)="handleChange($event)" value="GUEST">
+          <i class="primary"> Como Invitado <span class="material-icons mg-left-5">account_circle</span> </i>
+        </label>
+        <label class="tag">
+          <input type="radio" (change)="handleChange($event)"  name="auth" value="TMDB">
+          <i class="secondary"> Con TMDB <img alt="tmdb" class="icon" src="../../../favicon.ico"> </i>
+        </label>
+      </div>
+      <router-outlet></router-outlet>
+      <p class="reserved">Recuerda que todo el contenido audio / visual presente en esta web es producto de  <br />  <a href="https://www.themoviedb.org/documentation/api" target="_blank" class="color-blueLink u-underline"> The movie db API</a> <br /> Todos los Derechos Reservados. </p>
+      <img alt="logo" class="logo" width="200px" src="../../../assets/icons/logo.svg" />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<app-header></app-header>
+<div class="container_home">
+  <img width="100%" height="100%" alt="background" src="../../../assets/images/background-home.jpg">
+  <div class="mask_opacity">
+    <div class="content_center">
+      <h1 class="title_main"> ¡Es tiempo   de  <span class="color-blueLink"> ver</span>! <br />  Encuentra  <span class="color-blueLink">series,  </span> películas  y <span class="color-blueLink"> más.  </span>   </h1>
+      <h2 class="subtitle"> ¿Y a tí, que te gustaría ver hoy? </h2>
+      <form class="w-100" [formGroup]="formSearch" (submit)="submit()">
+        <div class="content_search">
+          <input type="search" formControlName="search" class="search" placeholder=" Buscar peliculas, series, programas de tv">
+          <input type="submit" value="Buscar" class="submit" >
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+.container_guest {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  .style_field {
+    height: 30px;
+    font-size: 18px;
+    color: white;
+  }
+  .submît {
+    width: 100%;
+    border: none;
+    height: 50px;
+    background-color: #01b4e4;
+    border-radius: 4px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: background-color 1s;
+    font-weight: 600;
+    font-style: normal;
+    color: #fff;
+    font-size: 18px;
+  }
+  .submît:hover {
+    background-color: #0178ff;
+  }
+}

@@ -1,0 +1,25 @@
+.public_header {
+  width: calc(100% - 7rem);
+  height: 5rem;
+  position: fixed;
+  z-Index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 10px;
+  left: 3.5rem;
+  right: 3.5rem;
+  .btn_login {
+    cursor: pointer;
+    padding: 9px 19px;
+    font-weight: 400;
+    font-size: 1rem;
+    background-color: #01b4e4;
+    color: #fff;
+    border-radius: 3px;
+    transition: background-color 1s;
+  }
+  .btn_login:hover {
+    background-color: rgb(1, 120, 255);
+  }
+}

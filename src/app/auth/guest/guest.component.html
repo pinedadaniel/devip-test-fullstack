@@ -1,0 +1,7 @@
+<form class="container_guest" [formGroup]="formLogin" (submit)="handleSubmit()">
+  <mat-form-field>
+    <mat-label> Usuario temporal </mat-label>
+    <input class="style_field" formControlName="username" autocomplete="off" type="text" matInput placeholder="Ex. username" />
+  </mat-form-field>
+  <input type="submit" class="submît" value="Inicia sesión" />
+</form>

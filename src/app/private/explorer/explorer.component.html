@@ -1,0 +1,36 @@
+<form class="w-100" [formGroup]="formSearch" (submit)="submit()">
+  <div class="content_search">
+    <input type="search" formControlName="search" class="search" placeholder=" Buscar peliculas, series, programas de tv">
+    <input type="submit" value="Buscar" class="submit" >
+  </div>
+</form>
+<div class="partial">
+  <div class="container_explorer">
+    <p class="color-white font-21 u-medium" *ngIf="movies.length < 1"> - No se encontraron resultados </p>
+    <div class="card" (click)="goToDetails(movie.id)" *ngFor="let movie of movies | paginate: { itemsPerPage: 20, currentPage: page }">
+      <img width="100%" alt="Image_movie" class="img_movie" height="100%" src="{{'https://image.tmdb.org/t/p/w500' + movie.poster_path}}">
+      <div class="mask_opacity">
+        <span> </span>
+        <i class="material-icons"> play_circle_outline </i>
+        <span> {{movie.original_title}} </span>
+      </div>
+    </div>
+  </div>
+  <div class="category">
+    <h4 class="title_category"> Recomendados para tí </h4>
+    <div class="list">
+      <div class="card_recommendated" (click)="goToDetails(movie.id)" *ngFor="let movie of recommendated | slice:0:4; ">
+        <img width="100%" alt="Image_movie" class="img_movie" height="100%" src="{{'https://image.tmdb.org/t/p/w500' + movie.poster_path}}">
+        <div class="mask_opacity">
+          <span> </span>
+          <i class="material-icons"> play_circle_outline </i>
+          <span> {{movie.original_title}} </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="paginator">
+  <pagination-controls (pageChange)="handleChange($event)"></pagination-controls>
+</div>
+

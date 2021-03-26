@@ -1,0 +1,25 @@
+<form class="container_tmdb" [formGroup]="formLogin" (submit)="handleSubmit()">
+  <mat-form-field>
+    <mat-label> Usuario </mat-label>
+    <input class="style_field" autocomplete="off" formControlName="username" type="text" matInput placeholder="Ex. username" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label> Contraseña </mat-label>
+    <input class="style_field" formControlName="password" type="password" matInput />
+  </mat-form-field>
+  <input type="submit" class="submît" value="Inicia sesión" />
+</form>
+
+<div class="container_alert" *ngIf="modal">
+  <div class="content_alert">
+    <h3 class="title"> Inicia sesión con tu cuenta de TMDB </h3>
+    <span class="br"></span>
+    <p class="info"> Para iniciar sesión con tu cuenta de The movie db debes aprobar la autenticacion de la API, Esto nos dara los permisos para leer tu informacion como datos, playList, favoritos, comentarios, etc.  </p>
+    <div class="row_btn">
+      <a class="btn_go" href="{{'https://www.themoviedb.org/authenticate/' + requestToken + '?redirect_to=' + env.URL_API + env.VERSION_API + env.URI_APPROVED}}" target="_blank"> Ir a aprobar </a>
+      <button (click)="closeModal()" class="btn_cancel"> Cancelar </button>
+    </div>
+    <img alt="logo" class="logo" width="200px" src="../../../assets/icons/logo.svg" />
+  </div>
+  <div class="util_position"></div>
+</div>

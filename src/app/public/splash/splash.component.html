@@ -1,0 +1,7 @@
+
+<div class="container-splash" [ngClass]="endAnimate ? 'end_animate' : '' ">
+  <div [ngClass]="timeAnimate ? 'animate' : '' " id="splash_main"  class="splash">
+    <img alt="logo" width="200px" [ngClass]="timeAnimate ? 'animate_logo' : '' " height="100px" class="logo" src="../../../assets/images/logo.svg">
+  </div>
+  <div *ngIf="sppiner" class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+</div>
